@@ -1,10 +1,10 @@
 import mongoose from "mongoose"
-import { MONGODB_URI } from './config.js'
+import { db } from './config.js'
 
 export const connectDB = async () => {
   try {
     mongoose.set('strictQuery', false)
-    const conn = await mongoose.connect(MONGODB_URI)
+    const conn = await mongoose.connect(db)
     console.log(`Mongodb connected: ${conn.connection.name}`)
   } catch (error) {
     console.error(`Error: ${error.message}`)
