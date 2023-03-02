@@ -1,15 +1,4 @@
 {
-  "schemaVersion": 2,
-  "dockerfileLines": [
-    "FROM node:18.13.0-alpine",
-    "RUN mkdir -p /server",
-    "WORKDIR /server",
-    "COPY ./package.json /server",
-    "RUN npm install && npm cache clean --force",
-    "COPY ./ /server",
-    "ENV NODE_ENV production",
-    "ENV PORT 80",
-    "EXPOSE 80",
-    "CMD [ \"npm\", \"start\" ]"
-  ]
+"schemaVersion": 2,
+"templateId": "node/8.13.0"
 }
